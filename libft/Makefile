@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+         #
+#    By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/17 20:25:28 by changhle          #+#    #+#              #
-#    Updated: 2023/03/24 18:20:24 by changhle         ###   ########.fr        #
+#    Created: 2021/11/17 20:25:28 by jerhee          #+#    #+#              #
+#    Updated: 2023/03/24 18:20:24 by jerhee         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

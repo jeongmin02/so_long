@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/28 16:27:20 by changhle          #+#    #+#             */
-/*   Updated: 2022/05/19 13:16:19 by changhle         ###   ########.fr       */
+/*   Created: 2021/11/28 16:27:20 by jerhee          #+#    #+#             */
+/*   Updated: 2022/05/19 13:16:19 by jerhee         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
