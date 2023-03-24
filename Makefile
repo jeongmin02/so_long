@@ -6,7 +6,7 @@
 #    By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/17 03:24:30 by changhle          #+#    #+#              #
-#    Updated: 2023/03/24 17:09:23 by changhle         ###   ########.fr        #
+#    Updated: 2023/03/24 18:19:38 by changhle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,24 +41,24 @@ all : $(NAME)
 bonus : $(BONUS)
 
 $(NAME) : $(OBJS_M)
-	make -s -C libft all
-	make -C mlx all
+	@make -s -C libft all
+	@make -C mlx all
 	gcc $(CFLAGS) -L./mlx -Imlx -framework OpenGL -framework AppKit ./libft/libft.a ./mlx/libmlx.a $(OBJS_M) -o $(NAME)
 
 $(BONUS) : $(OBJS_B)
-	make -s -C libft all
-	make -C mlx all
+	@make -s -C libft all
+	@make -C mlx all
 	gcc $(CFLAGS) -L./mlx -Imlx -framework OpenGL -framework AppKit ./libft/libft.a ./mlx/libmlx.a $(OBJS_B) -o $(BONUS)
 
 clean :
-	make -C libft clean
-	make -C mlx clean
-	rm -f $(OBJS_M)
-	rm -f $(OBJS_B)
+	@make -C libft clean
+	@make -C mlx clean
+	@rm -f $(OBJS_M)
+	@rm -f $(OBJS_B)
 
 fclean : clean
-	make -C libft fclean
-	rm -f $(NAME)
-	rm -f $(BONUS)
+	@make -C libft fclean
+	@rm -f $(NAME)
+	@rm -f $(BONUS)
 
 re : fclean all

@@ -40,7 +40,7 @@ void	check_element(t_info *info)
 		else if (info->map[i] == 'P')
 		{
 			if (info->player > 0)
-				info->map[i] = '0';
+				print_error("Map must have one starting position!");
 			else
 				info->player = i;
 		}

@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:42:06 by changhle          #+#    #+#             */
-/*   Updated: 2023/03/24 17:15:16 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 18:02:08 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,11 @@ void	parse(int argc, char **argv, t_info *info)
 	check_rectangle(info);
 	check_wall(info);
 	check_element(info);
-	if (info->exit == 0)
-		print_error("Map must have at least one exit!");
+	if (info->exit != 1)
+		print_error("Map must have one exit!");
 	else if (info->collect == 0)
 		print_error("Map must have at least one collectible!");
 	else if (info->player == 0)
-		print_error("Map must have at least one starting position!");
+		print_error("Map must have one starting position!");
 	check_finish(info);
 }

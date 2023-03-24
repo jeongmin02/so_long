@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: changhle <changhle@student.42.fr>          +#+  +:+       +#+         #
+#    By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/17 20:25:28 by changhle          #+#    #+#              #
-#    Updated: 2021/12/08 02:37:32 by changhle         ###   ########.fr        #
+#    Updated: 2023/03/24 18:20:24 by changhle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,10 +28,10 @@ $(NAME) : mandatory ;
 
 
 clean :
-	rm -f $(OBJS_M)
-	rm -f $(OBJS_B)
+	@rm -f $(OBJS_M)
+	@rm -f $(OBJS_B)
 
 fclean : clean	
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re : fclean all ;
