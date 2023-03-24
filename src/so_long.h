@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:42:19 by changhle          #+#    #+#             */
-/*   Updated: 2023/03/24 15:46:23 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:36:33 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@ typedef struct s_info
 {
 	struct s_ptr	*ptr;
 	char			*map;
+	char			*map_dfs;
 	unsigned int	height;
 	unsigned int	width;
 	unsigned int	exit;
+	unsigned int	exit_dfs;
 	unsigned int	collect;
+	unsigned int	collect_dfs;
 	unsigned int	player;
 	unsigned int	walk;
 }	t_info;
@@ -45,6 +48,10 @@ typedef struct s_sprite
 }	t_sprite;
 
 void	parse(int argc, char **argv, t_info *info);
+void	check_rectangle(t_info *info);
+void	check_wall(t_info *info);
+void	check_element(t_info *info);
+void	check_finish(t_info *info);
 void	xpm_to_image(t_info *info, t_ptr *ptr);
 int		exit_game(char *s_ptr);
 void	print_error(char *str);

@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:41:55 by changhle          #+#    #+#             */
-/*   Updated: 2023/03/24 15:46:39 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:39:59 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ static void	player_move(t_info *info, int move)
 				(info->player + move) / info->width);
 			put_image(info, info->ptr, info->player % info->width,
 				info->player / info->width);
-			put_image(info, info->ptr, 0, 0);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/10 07:04:01 by changhle          #+#    #+#             */
-/*   Updated: 2023/03/24 15:47:17 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:44:26 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	print_image(t_info *info, t_ptr *ptr)
 
 static void	set_count(t_sprite *sprite)
 {
-	if (sprite->count++ > 6000)
+	if (sprite->count++ > 5000)
 		sprite->count = 0;
 }
 
@@ -77,8 +77,8 @@ int	print_sprite_image(t_sprite *sprite)
 	i = -1;
 	p = sprite->info->player;
 	w = sprite->info->width;
-	if (sprite->count % 3000 == 0)
-		i = sprite->count / 3000;
+	if (sprite->count % 2500 == 0)
+		i = sprite->count / 2500;
 	if (i >= 0)
 	{
 		mlx_put_image_to_window(sprite->ptr->mlx, sprite->ptr->mlx_win,

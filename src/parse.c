@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:42:06 by changhle          #+#    #+#             */
-/*   Updated: 2023/03/24 13:39:15 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 17:15:16 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,52 +40,6 @@ static int	parse_map(char *filename, t_info *info)
 	return (0);
 }
 
-static void	check_rectangle(t_info *info)
-{
-	if (info->height * info->width != ft_strlen(info->map))
-		print_error("Map must be rectangle!");
-}
-
-static void	check_wall(t_info *info)
-{
-	unsigned int	i;
-	unsigned int	map_len;
-
-	i = 0;
-	map_len = ft_strlen(info->map);
-	while (i < map_len)
-	{
-		if (i < info->width || i % info->width == info->width - 1
-			|| i % info->width == 0 || i >= map_len - info->width)
-		{
-			if (info->map[i] != '1')
-				print_error("Map must be surrounded by walls!");
-		}
-		i++;
-	}
-}
-
-static void	check_element(t_info *info)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (i++ < ft_strlen(info->map))
-	{
-		if (info->map[i] == 'E')
-			info->exit++;
-		else if (info->map[i] == 'C')
-			info->collect++;
-		else if (info->map[i] == 'P')
-		{
-			if (info->player > 0)
-				info->map[i] = '0';
-			else
-				info->player = i;
-		}
-	}
-}
-
 void	parse(int argc, char **argv, t_info *info)
 {
 	if (argc != 2)
@@ -102,4 +56,5 @@ void	parse(int argc, char **argv, t_info *info)
 		print_error("Map must have at least one collectible!");
 	else if (info->player == 0)
 		print_error("Map must have at least one starting position!");
+	check_finish(info);
 }

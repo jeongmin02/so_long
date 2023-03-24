@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+         #
+#    By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/17 03:24:30 by changhle          #+#    #+#              #
-#    Updated: 2023/03/24 13:28:30 by jerhee           ###   ########.fr        #
+#    Updated: 2023/03/24 17:09:23 by changhle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ BONUS = so_long_bonus
 
 SRCS_M = src/main.c \
 			src/parse.c \
+			src/check_map.c \
 			src/convert_image.c \
 			src/print_image.c \
 			src/event.c \
