@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:41:22 by changhle          #+#    #+#             */
-/*   Updated: 2022/09/10 07:36:46 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 14:09:44 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ int	main(int argc, char **argv)
 	ft_memset(&info, 0, sizeof(t_info));
 	parse(argc, argv, &info);
 	xpm_to_image(&info, &ptr);
-	mlx_string_put(ptr.mlx, ptr.mlx_win, 2, 14, 0xFFFFFF, "MOVE: 0");
 	mlx_key_hook(ptr.mlx_win, key_press, &info);
 	mlx_hook(ptr.mlx_win, 17, 0, &exit_game, "Press red button!");
 	sprite.info = &info;

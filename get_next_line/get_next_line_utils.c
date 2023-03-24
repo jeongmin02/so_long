@@ -3,108 +3,60 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/15 20:16:40 by jerhee            #+#    #+#             */
-/*   Updated: 2022/11/15 20:56:40 by jerhee           ###   ########.fr       */
+/*   Created: 2021/11/28 16:27:20 by changhle          #+#    #+#             */
+/*   Updated: 2022/05/19 13:16:19 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-size_t	ft_strlen(char *s)
+int	ft_isnewline(char *s, int c)
 {
-	size_t	i;
-
 	if (!s)
 		return (0);
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strjoin(char *s1, char *s2)
-{
-	size_t	s1_len;
-	size_t	s2_len;
-	size_t	i;
-	char	*res;
-
-	s1_len = ft_strlen(s1);
-	s2_len = ft_strlen(s2);
-	res = (char *)malloc(sizeof(char) * (s1_len + s2_len + 1));
-	if (!res)
-		return (NULL);
-	i = -1;
-	while (++i < s1_len)
-		res[i] = s1[i];
-	i = -1;
-	while (++i < s2_len)
-		res[s1_len + i] = s2[i];
-	res[s1_len + s2_len] = '\0';
-	if (s1)
-		free(s1);
-	return (res);
-}
-
-int	ft_is_strchr(char *s, int c)
-{
-	int	i;
-
-	if (!s)
-		return (0);
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
+		if (*s == (unsigned char)c)
 			return (1);
-		i++;
+		s++;
 	}
 	return (0);
 }
 
-t_list	*ft_check_fd(t_list **static_list, int fd)
+size_t	ft_gnl_strlen(char *s)
 {
-	t_list	*new;
-	t_list	*tmp;
+	size_t	len;
 
-	tmp = *static_list;
-	while (tmp)
-	{
-		if (tmp->fd == fd)
-			return (tmp);
-		tmp = tmp->next;
-	}
-	if (!tmp)
-	{
-		new = malloc(sizeof(t_list));
-		new->fd = fd;
-		new->str = NULL;
-		new->next = *static_list;
-		*static_list = new;
-	}
-	return (*static_list);
+	if (!s)
+		return (0);
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }
 
-void	ft_free_node(t_list **list, int fd)
+char	*ft_gnl_strjoin(char *s1, char *s2)
 {
-	t_list	*tmp;
-	t_list	*pre;
+	size_t	i;
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*str;
 
-	tmp = *list;
-	pre = NULL;
-	while (tmp)
-	{
-		if (tmp->fd == fd)
-			break ;
-		pre = tmp;
-		tmp = tmp->next;
-	}
-	if (!pre)
-		*list = tmp->next;
-	else
-		pre->next = tmp->next;
-	free(tmp->str);
-	free(tmp);
+	s1_len = ft_gnl_strlen(s1);
+	s2_len = ft_gnl_strlen(s2);
+	str = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
+	i = -1;
+	while (++i < s1_len)
+		str[i] = s1[i];
+	i = -1;
+	while (++i < s2_len)
+		str[s1_len + i] = s2[i];
+	str[s1_len + s2_len] = '\0';
+	if (s1)
+		free(s1);
+	return (str);
 }

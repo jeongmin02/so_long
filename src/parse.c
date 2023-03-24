@@ -6,7 +6,7 @@
 /*   By: changhle <changhle@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:42:06 by changhle          #+#    #+#             */
-/*   Updated: 2022/09/17 21:35:31 by changhle         ###   ########.fr       */
+/*   Updated: 2023/03/24 13:39:15 by changhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,12 +82,6 @@ static void	check_element(t_info *info)
 				info->map[i] = '0';
 			else
 				info->player = i;
-		}
-		else if (i / 20 > 0 && i % 20 == 0 && info->map[i] == '0'
-			&& info->patrol == 0)
-		{
-			info->map[i] = 'M';
-			info->patrol = i;
 		}
 	}
 }
