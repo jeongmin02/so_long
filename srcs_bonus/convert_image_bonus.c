@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   convert_image.c                                    :+:      :+:    :+:   */
+/*   convert_image_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 19:41:42 by jerhee          #+#    #+#             */
-/*   Updated: 2023/03/24 15:46:39 by jerhee         ###   ########.fr       */
+/*   Created: 2022/08/15 19:41:42 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:57:46 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "../mlx/mlx.h"
 
 static void	xpm_to_player_image(t_ptr *ptr, int width, int height)

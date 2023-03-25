@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   event.c                                            :+:      :+:    :+:   */
+/*   event_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 19:41:55 by jerhee          #+#    #+#             */
-/*   Updated: 2023/03/24 17:39:59 by jerhee         ###   ########.fr       */
+/*   Created: 2023/03/25 14:55:01 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:57:48 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "../libft/libft.h"
+#include "../ft_printf/ft_printf.h"
 #include "../mlx/mlx.h"
 
 static void	player_move(t_info *info, int move)
@@ -29,7 +29,7 @@ static void	player_move(t_info *info, int move)
 			info->map[info->player - move] = 'P';
 			info->map[info->player] = '0';
 			info->player -= move;
-			printf("움직인 횟수 : %d\n", info->walk);
+			ft_printf("움직인 횟수 : %d\n", info->walk);
 			put_image(info, info->ptr, (info->player + move) % info->width,
 				(info->player + move) / info->width);
 			put_image(info, info->ptr, info->player % info->width,

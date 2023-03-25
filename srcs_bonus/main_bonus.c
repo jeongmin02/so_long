@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 19:41:22 by jerhee          #+#    #+#             */
-/*   Updated: 2023/03/24 14:09:44 by jerhee         ###   ########.fr       */
+/*   Created: 2022/08/15 19:41:22 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:57:50 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "../libft/libft.h"
 #include "../mlx/mlx.h"
 

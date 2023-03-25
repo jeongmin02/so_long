@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.c                                            :+:      :+:    :+:   */
+/*   parse_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 19:42:06 by jerhee          #+#    #+#             */
-/*   Updated: 2023/03/24 18:02:08 by jerhee         ###   ########.fr       */
+/*   Created: 2022/08/15 19:42:06 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:57:51 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "../libft/libft.h"
 #include "../get_next_line/get_next_line.h"
 
@@ -30,7 +30,6 @@ static int	parse_map(char *filename, t_info *info)
 	delete_newline(str);
 	while (str)
 	{
-		// if (ft_strlen(str))
 		info->height++;
 		info->map = ft_free_strjoin(info->map, str);
 		if (!info->map)

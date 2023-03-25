@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_map.c                                        :+:      :+:    :+:   */
+/*   check_map_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/24 18:26:43 by jerhee          #+#    #+#             */
-/*   Updated: 2023/03/24 18:26:45 by jerhee         ###   ########.fr       */
+/*   Created: 2023/03/24 18:26:43 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:57:45 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "so_long.h"
+#include "so_long_bonus.h"
 #include "../libft/libft.h"
-#include <stdio.h>
+
 void	check_rectangle(t_info *info)
 {
 	int	i;
@@ -21,7 +21,7 @@ void	check_rectangle(t_info *info)
 	while (info->map[i])
 	{
 		if ((info->map[i] != '0' && info->map[i] != '1' && info->map[i] != 'E'
-			&& info->map[i] != 'P' && info->map[i] != 'C'))
+				&& info->map[i] != 'P' && info->map[i] != 'C'))
 			print_error("Map error!");
 		i++;
 	}

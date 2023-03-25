@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 19:42:51 by jerhee          #+#    #+#             */
-/*   Updated: 2022/09/09 05:35:34 by jerhee         ###   ########.fr       */
+/*   Created: 2022/08/15 19:42:51 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:56:50 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <stdlib.h>
 #include "../libft/libft.h"
+#include "../ft_printf/ft_printf.h"
 
 int	exit_game(char *str)
 {
-	printf("%s\n", str);
+	ft_printf("%s\n", str);
 	exit(0);
 }
 
 void	print_error(char *str)
 {
-	printf("Error\n%s\n", str);
+	ft_printf("Error\n%s\n", str);
 	exit(1);
 }
 

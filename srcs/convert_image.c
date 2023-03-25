@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   convert_image.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jerhee <jerhee@student.42seoul.kr>     +#+  +:+       +#+        */
+/*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/15 19:41:42 by jerhee          #+#    #+#             */
-/*   Updated: 2022/09/10 08:16:38 by jerhee         ###   ########.fr       */
+/*   Created: 2022/08/15 19:41:42 by jerhee            #+#    #+#             */
+/*   Updated: 2023/03/25 14:56:50 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,33 +16,17 @@
 static void	xpm_to_player_image(t_ptr *ptr, int width, int height)
 {
 	ptr->player_ptr[0] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/player00.xpm", &width, &height);
+			"./images/pacman_close.xpm", &width, &height);
 	ptr->player_ptr[1] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/player01.xpm", &width, &height);
-	ptr->player_ptr[2] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/player02.xpm", &width, &height);
-	ptr->player_ptr[3] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/player03.xpm", &width, &height);
-}
-
-static void	xpm_to_patrol_image(t_ptr *ptr, int width, int height)
-{
-	ptr->patrol_ptr[0] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/patrol00.xpm", &width, &height);
-	ptr->patrol_ptr[1] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/patrol01.xpm", &width, &height);
-	ptr->patrol_ptr[2] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/patrol02.xpm", &width, &height);
-	ptr->patrol_ptr[3] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/patrol03.xpm", &width, &height);
-}
-
-static void	xpm_to_exit_image(t_ptr *ptr, int width, int height)
-{
-	ptr->exit_ptr[0] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/exit00.xpm", &width, &height);
-	ptr->exit_ptr[1] = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/exit01.xpm", &width, &height);
+			"./images/pacman_right.xpm", &width, &height);
+	ptr->player_dir_ptr[0] = mlx_xpm_file_to_image(ptr->mlx,
+			"./images/pacman_right.xpm", &width, &height);
+	ptr->player_dir_ptr[1] = mlx_xpm_file_to_image(ptr->mlx,
+			"./images/pacman_left.xpm", &width, &height);
+	ptr->player_dir_ptr[2] = mlx_xpm_file_to_image(ptr->mlx,
+			"./images/pacman_up.xpm", &width, &height);
+	ptr->player_dir_ptr[3] = mlx_xpm_file_to_image(ptr->mlx,
+			"./images/pacman_down.xpm", &width, &height);
 }
 
 void	xpm_to_image(t_info *info, t_ptr *ptr)
@@ -57,15 +41,13 @@ void	xpm_to_image(t_info *info, t_ptr *ptr)
 			info->height * height, "so_long");
 	ptr->wall_ptr = mlx_xpm_file_to_image(ptr->mlx,
 			"./images/wall.xpm", &width, &height);
-	ptr->wall_move_ptr = mlx_xpm_file_to_image(ptr->mlx,
-			"./images/wall_move.xpm", &width, &height);
 	ptr->tile_ptr = mlx_xpm_file_to_image(ptr->mlx,
 			"./images/tile.xpm", &width, &height);
 	ptr->collect_ptr = mlx_xpm_file_to_image(ptr->mlx,
 			"./images/collect.xpm", &width, &height);
+	ptr->exit_ptr = mlx_xpm_file_to_image(ptr->mlx,
+			"./images/exit.xpm", &width, &height);
 	xpm_to_player_image(ptr, width, height);
-	xpm_to_patrol_image(ptr, width, height);
-	xpm_to_exit_image(ptr, width, height);
 	info->ptr = ptr;
 	print_image(info, ptr);
 }

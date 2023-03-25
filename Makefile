@@ -15,23 +15,30 @@ CFLAGS = -Wall -Werror -Wextra
 NAME = so_long
 BONUS = so_long_bonus
 
-SRCS_M = src/main.c \
-			src/parse.c \
-			src/check_map.c \
-			src/convert_image.c \
-			src/print_image.c \
-			src/event.c \
-			src/utils.c \
+SRCS_M = srcs/main.c \
+			srcs/parse.c \
+			srcs/check_map.c \
+			srcs/convert_image.c \
+			srcs/print_image.c \
+			srcs/event.c \
+			srcs/utils.c \
 			get_next_line/get_next_line.c \
-			get_next_line/get_next_line_utils.c
-SRCS_B = src_bonus/main.c \
-			src_bonus/parse.c \
-			src_bonus/convert_image.c \
-			src_bonus/print_image.c \
-			src_bonus/event.c \
-			src_bonus/utils.c \
+			get_next_line/get_next_line_utils.c \
+			ft_printf/ft_printf.c \
+			ft_printf/print_arg.c \
+			ft_printf/utils.c
+SRCS_B = srcs_bonus/main_bonus.c \
+			srcs_bonus/parse_bonus.c \
+			srcs_bonus/check_map_bonus.c \
+			srcs_bonus/convert_image_bonus.c \
+			srcs_bonus/print_image_bonus.c \
+			srcs_bonus/event_bonus.c \
+			srcs_bonus/utils_bonus.c \
 			get_next_line/get_next_line.c \
-			get_next_line/get_next_line_utils.c
+			get_next_line/get_next_line_utils.c \
+			ft_printf/ft_printf.c \
+			ft_printf/print_arg.c \
+			ft_printf/utils.c
 
 OBJS_M = $(SRCS_M:.c=.o)
 OBJS_B = $(SRCS_B:.c=.o)
