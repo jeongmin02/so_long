@@ -6,12 +6,12 @@
 /*   By: jerhee <jerhee@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/15 19:42:19 by jerhee            #+#    #+#             */
-/*   Updated: 2023/03/25 14:57:56 by jerhee           ###   ########.fr       */
+/*   Updated: 2023/03/25 15:22:28 by jerhee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SO_LONG_H
-# define SO_LONG_H
+#ifndef SO_LONG_BONUS_H
+# define SO_LONG_BONUS_H
 
 # define KEY_ESC 53
 # define KEY_W 13
