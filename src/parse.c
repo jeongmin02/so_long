@@ -21,15 +21,18 @@ static int	parse_map(char *filename, t_info *info)
 	char	*str;
 
 	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		print_error("Can not open file!");
 	str = get_next_line(fd);
 	if (!str)
 		return (close(fd));
 	info->width = ft_strlen(str) - 1;
-	// delete_newline(str);
+	delete_newline(str);
 	while (str)
 	{
+		// if (ft_strlen(str))
 		info->height++;
-		info->map = ft_free_strjoin(ft_strtrim(info->map, str);
+		info->map = ft_free_strjoin(info->map, str);
 		if (!info->map)
 			print_error("Join failed");
 		str = get_next_line(fd);

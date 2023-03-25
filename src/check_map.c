@@ -12,11 +12,21 @@
 
 #include "so_long.h"
 #include "../libft/libft.h"
-
+#include <stdio.h>
 void	check_rectangle(t_info *info)
 {
+	int	i;
+
+	i = 0;
+	while (info->map[i])
+	{
+		if ((info->map[i] != '0' && info->map[i] != '1' && info->map[i] != 'E'
+			&& info->map[i] != 'P' && info->map[i] != 'C'))
+			print_error("Map error!");
+		i++;
+	}
 	if (info->height * info->width != ft_strlen(info->map))
-		print_error("Map must be rectangle!");
+		print_error("Map error!");
 }
 
 void	check_wall(t_info *info)
