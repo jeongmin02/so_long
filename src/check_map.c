@@ -81,7 +81,7 @@ void	check_finish(t_info *info)
 	info->map_dfs = ft_strdup(info->map);
 	recursive(info, info->map_dfs, info->player);
 	if (!info->exit_dfs || info->collect != info->collect_dfs)
-		print_error("Map that cannot be cleared!");
+		print_error("Map cannot be cleared!");
 	free(info->map_dfs);
 	info->map_dfs = NULL;
 }

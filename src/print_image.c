@@ -79,12 +79,12 @@ int	print_sprite_image(t_sprite *sprite)
 	w = sprite->info->width;
 	if (sprite->count % 2500 == 0)
 		i = sprite->count / 2500;
-	if (i >= 0)
+	if (i > 0)
 	{
 		mlx_put_image_to_window(sprite->ptr->mlx, sprite->ptr->mlx_win,
 			sprite->ptr->tile_ptr, (p % w) * 64, (p / w) * 64);
 		mlx_put_image_to_window(sprite->ptr->mlx, sprite->ptr->mlx_win,
-			sprite->ptr->player_ptr[i], (p % w) * 64, (p / w) * 64);
+			sprite->ptr->player_ptr[i - 1], (p % w) * 64, (p / w) * 64);
 	}
 	set_count(sprite);
 	return (0);

@@ -13,6 +13,13 @@
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
+# define KEY_ESC 53
+# define KEY_W 13
+# define KEY_A 0
+# define KEY_S 1
+# define KEY_D 2
+# define KEY_RED 17
+
 typedef struct s_info
 {
 	struct s_ptr	*ptr;

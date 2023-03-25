@@ -24,7 +24,7 @@ int	main(int argc, char **argv)
 	parse(argc, argv, &info);
 	xpm_to_image(&info, &ptr);
 	mlx_key_hook(ptr.mlx_win, key_press, &info);
-	mlx_hook(ptr.mlx_win, 17, 0, &exit_game, "Press red button!");
+	mlx_hook(ptr.mlx_win, KEY_RED, 0, &exit_game, "Press red button!");
 	sprite.info = &info;
 	sprite.ptr = &ptr;
 	sprite.count = 0;

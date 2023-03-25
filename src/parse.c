@@ -25,11 +25,11 @@ static int	parse_map(char *filename, t_info *info)
 	if (!str)
 		return (close(fd));
 	info->width = ft_strlen(str) - 1;
-	delete_newline(str);
+	// delete_newline(str);
 	while (str)
 	{
 		info->height++;
-		info->map = ft_free_strjoin(info->map, str);
+		info->map = ft_free_strjoin(ft_strtrim(info->map, str);
 		if (!info->map)
 			print_error("Join failed");
 		str = get_next_line(fd);

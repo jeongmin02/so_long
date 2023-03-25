@@ -14,11 +14,6 @@
 #include "so_long.h"
 #include "../libft/libft.h"
 #include "../mlx/mlx.h"
-#define KEY_ESC 53
-#define KEY_W 13
-#define KEY_A 0
-#define KEY_S 1
-#define KEY_D 2
 
 static void	player_move(t_info *info, int move)
 {
